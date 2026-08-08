@@ -3,49 +3,185 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>দ্বীনের আলো</title>
-<meta name="description" content="কুরআন, হাদীস, ফিকহ, ইসলামিক প্রবন্ধ ও শিক্ষা।">
+
+<title>দ্বীনের আলো | মুফতি সেখ আমানুর রহমান কাসেমী</title>
+
+<meta name="description" content="দ্বীনের আলো — মুফতি সেখ আমানুর রহমান কাসেমীর ইসলামিক প্রবন্ধ, কুরআন, হাদীস, ফিকহ ও ইসলামিক শিক্ষার একটি প্ল্যাটফর্ম।">
+
 <style>
+*{
+    box-sizing:border-box;
+}
+
 body{
     margin:0;
-    font-family:Arial,sans-serif;
-    background:#f5f5f5;
+    font-family:Arial,"Noto Sans Bengali",sans-serif;
+    background:#f5f8f6;
+    color:#17231d;
+    line-height:1.8;
 }
+
 header{
-    background:#0d6b3f;
+    background:linear-gradient(135deg,#075b38,#0d7a4a);
     color:white;
+    padding:28px 18px;
     text-align:center;
-    padding:25px;
 }
+
+.logo{
+    font-size:32px;
+    font-weight:bold;
+    margin:0;
+}
+
+.tagline{
+    margin:5px 0 0;
+    font-size:15px;
+    opacity:.95;
+}
+
 nav{
-    background:#094d2d;
-    padding:12px;
+    background:#06452b;
+    padding:12px 8px;
     text-align:center;
+    position:sticky;
+    top:0;
+    z-index:10;
 }
+
 nav a{
     color:white;
     text-decoration:none;
-    margin:15px;
+    display:inline-block;
+    margin:5px 9px;
+    font-size:14px;
     font-weight:bold;
 }
-.container{
-    max-width:1000px;
-    margin:auto;
-    padding:20px;
+
+nav a:hover{
+    color:#d9f5e5;
 }
+
+.hero{
+    background:linear-gradient(135deg,#e8f6ee,#ffffff);
+    padding:55px 20px;
+    text-align:center;
+}
+
+.hero h1{
+    color:#075b38;
+    font-size:34px;
+    margin:0 0 12px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    color:#4a5b52;
+    font-size:17px;
+}
+
+.buttons{
+    margin-top:25px;
+}
+
+.button{
+    display:inline-block;
+    background:#0d7045;
+    color:white;
+    text-decoration:none;
+    padding:11px 20px;
+    border-radius:8px;
+    margin:5px;
+    font-weight:bold;
+}
+
+.button.secondary{
+    background:white;
+    color:#075b38;
+    border:1px solid #0d7045;
+}
+
+.container{
+    max-width:1050px;
+    margin:auto;
+    padding:25px 18px;
+}
+
+.section-title{
+    text-align:center;
+    color:#075b38;
+    margin:25px 0 10px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:18px;
+    margin-top:20px;
+}
+
 .card{
     background:white;
-    padding:20px;
-    border-radius:10px;
-    margin-top:20px;
-    box-shadow:0 2px 8px rgba(0,0,0,.1);
+    padding:22px;
+    border-radius:14px;
+    box-shadow:0 4px 15px rgba(0,0,0,.07);
+    border:1px solid #e5eee9;
 }
+
+.card h3{
+    color:#075b38;
+    margin-top:0;
+}
+
+.about{
+    background:white;
+    border-radius:14px;
+    padding:28px;
+    margin-top:25px;
+    box-shadow:0 4px 15px rgba(0,0,0,.06);
+}
+
+.about h2{
+    color:#075b38;
+    margin-top:0;
+}
+
 footer{
-    background:#0d6b3f;
+    background:#063d27;
     color:white;
     text-align:center;
-    padding:15px;
-    margin-top:30px;
+    padding:25px 15px;
+    margin-top:35px;
+}
+
+footer p{
+    margin:5px;
+    font-size:14px;
+}
+
+@media(max-width:600px){
+
+    .logo{
+        font-size:27px;
+    }
+
+    .hero{
+        padding:40px 17px;
+    }
+
+    .hero h1{
+        font-size:27px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    nav a{
+        margin:4px 6px;
+        font-size:13px;
+    }
 }
 </style>
 </head>
@@ -53,33 +189,148 @@ footer{
 <body>
 
 <header>
-<h1>🌙 দ্বীনের আলো</h1>
-<p>বিশুদ্ধ ইসলামিক জ্ঞান প্রচারের একটি ক্ষুদ্র প্রয়াস</p>
+    <h1 class="logo">🌙 দ্বীনের আলো</h1>
+    <p class="tagline">বিশুদ্ধ ইসলামিক জ্ঞান প্রচারের একটি ক্ষুদ্র প্রয়াস</p>
 </header>
 
 <nav>
-<a href="#">হোম</a>
-<a href="#">পোস্ট</a>
-<a href="#">আমার পরিচয়</a>
-<a href="#">যোগাযোগ</a>
+    <a href="#home">হোম</a>
+    <a href="#about">আমার পরিচয়</a>
+    <a href="#posts">প্রবন্ধ</a>
+    <a href="#knowledge">ইসলামিক জ্ঞান</a>
+    <a href="#contact">যোগাযোগ</a>
 </nav>
+
+<section class="hero" id="home">
+
+    <h1>আসসালামু আলাইকুম</h1>
+
+    <p>
+        দ্বীনের আলো ওয়েবসাইটে আপনাকে স্বাগতম।
+        কুরআন, হাদীস, ফিকহ এবং ইসলামিক শিক্ষার
+        নির্ভরযোগ্য জ্ঞান মানুষের কাছে পৌঁছে দেওয়াই
+        এই উদ্যোগের মূল উদ্দেশ্য।
+    </p>
+
+    <div class="buttons">
+        <a class="button" href="#posts">প্রবন্ধ পড়ুন</a>
+        <a class="button secondary" href="#about">আমার পরিচয়</a>
+    </div>
+
+</section>
 
 <div class="container">
 
-<div class="card">
-<h2>আসসালামু আলাইকুম</h2>
-<p>দ্বীনের আলো ওয়েবসাইটে আপনাকে স্বাগতম। এখানে কুরআন, হাদীস, ফিকহ এবং ইসলামিক শিক্ষা সম্পর্কিত প্রবন্ধ প্রকাশ করা হবে।</p>
+<section id="about" class="about">
+
+    <h2>👤 আমার পরিচয়</h2>
+
+    <h3>মুফতি সেখ আমানুর রহমান কাসেমী (কেশপুরি)</h3>
+
+    <p>
+        মাওলানা ও মুফতি। প্রাথমিক শিক্ষা জামিয়া ইসলামিয়া
+        আশরাফুল উলুম, কেশপুরে। উচ্চতর শিক্ষা জামিয়া ইসলামিয়া
+        রিরহি তাজপুরা, সাহারানপুরে।
+    </p>
+
+    <p>
+        দাওরায়ে হাদীস সম্পন্ন করেছেন জামিয়া ইসলামিয়া
+        দারুল উলুম ওয়াকফ, দেওবন্দ থেকে এবং ইফতা (ইসলামিক ল)
+        সম্পন্ন করেছেন আব্দুল্লাহ ইবনে মাসউদ ফিকহ একাডেমি,
+        দেওবন্দ থেকে।
+    </p>
+
+    <p>
+        বর্তমানে জামিয়া আজহারুল উলুম, বর্ধমানে খিদমত করছেন।
+        এর আগে দুই বছর মাদ্রাসা সিরাজুল উলুম, তমলুকে শিক্ষকতা করেছেন।
+        বর্তমানে রাষ্ট্রবিজ্ঞান (Political Science) নিয়ে পড়াশোনা করছেন।
+    </p>
+
+    <p>
+        <strong>লক্ষ্য ও মিশন:</strong>
+        সমাজকে ইসলামিক ও রাজনৈতিকভাবে সচেতন করা,
+        মানুষকে জ্ঞান ও চিন্তার মাধ্যমে গড়ে তোলা এবং
+        একটি সচেতন ও আদর্শ সমাজ নির্মাণে ভূমিকা রাখা।
+    </p>
+
+</section>
+
+<h2 class="section-title" id="knowledge">📚 ইসলামিক জ্ঞান</h2>
+
+<div class="cards">
+
+    <div class="card">
+        <h3>📖 কুরআন</h3>
+        <p>পবিত্র কুরআনের শিক্ষা, তাফসীর ও বিভিন্ন গুরুত্বপূর্ণ বিষয়।</p>
+    </div>
+
+    <div class="card">
+        <h3>📜 হাদীস</h3>
+        <p>হাদীসের শিক্ষা ও সুন্নাহ সম্পর্কিত নির্বাচিত আলোচনা।</p>
+    </div>
+
+    <div class="card">
+        <h3>⚖️ ফিকহ ও ফতোয়া</h3>
+        <p>ফিকহ ও সমসাময়িক মাসআলা-মাসায়েল সম্পর্কিত আলোচনা।</p>
+    </div>
+
+    <div class="card">
+        <h3>📝 ইসলামিক প্রবন্ধ</h3>
+        <p>ইসলাম, সমাজ ও সমসাময়িক বিষয় নিয়ে বিভিন্ন প্রবন্ধ।</p>
+    </div>
+
 </div>
 
+<section id="posts">
+
+<h2 class="section-title">📰 সর্বশেষ পোস্ট</h2>
+
 <div class="card">
-<h2>সর্বশেষ পোস্ট</h2>
-<p>খুব শীঘ্রই নতুন ইসলামিক পোস্ট প্রকাশ করা হবে, ইনশাআল্লাহ।</p>
+    <h3>খুব শীঘ্রই নতুন ইসলামিক পোস্ট প্রকাশ করা হবে</h3>
+    <p>
+        ইনশাআল্লাহ, নিয়মিতভাবে ইসলামিক প্রবন্ধ,
+        কুরআন-হাদীস, ফিকহ এবং শিক্ষামূলক লেখা প্রকাশ করা হবে।
+    </p>
 </div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="section-title">📞 যোগাযোগ</h2>
+
+<div class="card">
+
+    <p>
+        <strong>ই-মেইল:</strong><br>
+        mftskamanurrahamanqasemi@gmail.com
+    </p>
+
+    <p>
+        <strong>মোবাইল:</strong><br>
+        7364877946
+    </p>
+
+    <p>
+        <small>যোগাযোগের সময়: আসর থেকে মাগরিব পর্যন্ত</small>
+    </p>
+
+</div>
+
+</section>
 
 </div>
 
 <footer>
-© ২০২৬ দ্বীনের আলো | All Rights Reserved
+
+    <p>🌙 দ্বীনের আলো</p>
+
+    <p>
+        মুফতি সেখ আমানুর রহমান কাসেমী (কেশপুরি)
+    </p>
+
+    <p>© ২০২৬ দ্বীনের আলো | All Rights Reserved</p>
+
 </footer>
 
 </body>
