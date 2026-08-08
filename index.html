@@ -16,20 +16,28 @@
 body{
     margin:0;
     font-family:Arial,"Noto Sans Bengali",sans-serif;
-    background:#f5f8f6;
+    background:#f4f7f5;
     color:#17231d;
-    line-height:1.8;
+    line-height:1.75;
 }
 
+/* Header */
 header{
-    background:linear-gradient(135deg,#075b38,#0d7a4a);
+    background:#075b38;
     color:white;
-    padding:28px 18px;
+    padding:25px 15px;
     text-align:center;
 }
 
+header img{
+    max-width:180px;
+    height:auto;
+    display:block;
+    margin:0 auto 12px;
+}
+
 .logo{
-    font-size:32px;
+    font-size:31px;
     font-weight:bold;
     margin:0;
 }
@@ -37,12 +45,12 @@ header{
 .tagline{
     margin:5px 0 0;
     font-size:15px;
-    opacity:.95;
 }
 
+/* Navigation */
 nav{
-    background:#06452b;
-    padding:12px 8px;
+    background:#063f29;
+    padding:11px 6px;
     text-align:center;
     position:sticky;
     top:0;
@@ -53,45 +61,43 @@ nav a{
     color:white;
     text-decoration:none;
     display:inline-block;
-    margin:5px 9px;
+    margin:4px 8px;
     font-size:14px;
     font-weight:bold;
 }
 
-nav a:hover{
-    color:#d9f5e5;
-}
-
+/* Welcome */
 .hero{
-    background:linear-gradient(135deg,#e8f6ee,#ffffff);
-    padding:55px 20px;
+    background:#eaf5ef;
+    padding:48px 20px;
     text-align:center;
+    border-bottom:1px solid #d5e7dc;
 }
 
 .hero h1{
     color:#075b38;
-    font-size:34px;
-    margin:0 0 12px;
+    font-size:32px;
+    margin:0 0 10px;
 }
 
 .hero p{
     max-width:700px;
     margin:auto;
-    color:#4a5b52;
-    font-size:17px;
+    color:#405149;
+    font-size:16px;
 }
 
 .buttons{
-    margin-top:25px;
+    margin-top:22px;
 }
 
 .button{
     display:inline-block;
-    background:#0d7045;
+    background:#075b38;
     color:white;
     text-decoration:none;
-    padding:11px 20px;
-    border-radius:8px;
+    padding:10px 20px;
+    border-radius:7px;
     margin:5px;
     font-weight:bold;
 }
@@ -99,59 +105,134 @@ nav a:hover{
 .button.secondary{
     background:white;
     color:#075b38;
-    border:1px solid #0d7045;
+    border:1px solid #075b38;
 }
 
+/* Main container */
 .container{
     max-width:1050px;
     margin:auto;
-    padding:25px 18px;
+    padding:28px 16px;
 }
 
+/* Section heading */
 .section-title{
     text-align:center;
     color:#075b38;
-    margin:25px 0 10px;
+    margin:30px 0 16px;
+    font-size:25px;
 }
 
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:18px;
-    margin-top:20px;
-}
-
-.card{
-    background:white;
-    padding:22px;
-    border-radius:14px;
-    box-shadow:0 4px 15px rgba(0,0,0,.07);
-    border:1px solid #e5eee9;
-}
-
-.card h3{
-    color:#075b38;
-    margin-top:0;
-}
-
+/* About section */
 .about{
     background:white;
     border-radius:14px;
-    padding:28px;
-    margin-top:25px;
-    box-shadow:0 4px 15px rgba(0,0,0,.06);
+    padding:25px 20px;
+    margin:15px 0 35px;
+    box-shadow:0 3px 14px rgba(0,0,0,.06);
+    border-top:4px solid #075b38;
+}
+
+.about-header{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.about-photo{
+    width:125px;
+    height:125px;
+    object-fit:cover;
+    border-radius:50%;
+    border:4px solid #075b38;
+    display:block;
+    margin:0 auto 14px;
 }
 
 .about h2{
     color:#075b38;
-    margin-top:0;
+    margin:0 0 5px;
+    font-size:25px;
 }
 
+.about h3{
+    color:#075b38;
+    margin:8px 0;
+    font-size:21px;
+}
+
+.about p{
+    margin:8px 0;
+}
+
+/* Knowledge cards */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:16px;
+    margin-top:18px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 3px 13px rgba(0,0,0,.06);
+    border:1px solid #e0ebe5;
+}
+
+.card h3{
+    color:#075b38;
+    margin:0 0 7px;
+}
+
+.card p{
+    margin:5px 0;
+}
+
+/* Latest post */
+.latest-post{
+    background:white;
+    border-radius:14px;
+    padding:22px 20px;
+    margin-top:18px;
+    box-shadow:0 3px 14px rgba(0,0,0,.06);
+    border-left:4px solid #075b38;
+}
+
+.latest-post h3{
+    color:#075b38;
+    margin:0 0 7px;
+}
+
+.read-more{
+    display:inline-block;
+    margin-top:10px;
+    background:#075b38;
+    color:white;
+    text-decoration:none;
+    padding:9px 18px;
+    border-radius:7px;
+    font-weight:bold;
+}
+
+/* Contact */
+.contact-card{
+    background:white;
+    border-radius:12px;
+    padding:20px;
+    box-shadow:0 3px 13px rgba(0,0,0,.06);
+}
+
+.contact-card p{
+    margin:7px 0;
+}
+
+/* Footer */
 footer{
     background:#063d27;
     color:white;
     text-align:center;
-    padding:25px 15px;
+    padding:22px 15px;
     margin-top:35px;
 }
 
@@ -160,6 +241,7 @@ footer p{
     font-size:14px;
 }
 
+/* Mobile */
 @media(max-width:600px){
 
     .logo{
@@ -167,7 +249,7 @@ footer p{
     }
 
     .hero{
-        padding:40px 17px;
+        padding:38px 16px;
     }
 
     .hero h1{
@@ -179,8 +261,24 @@ footer p{
     }
 
     nav a{
-        margin:4px 6px;
+        margin:4px 5px;
         font-size:13px;
+    }
+
+    .about{
+        padding:22px 16px;
+    }
+
+    .about h2{
+        font-size:23px;
+    }
+
+    .about h3{
+        font-size:19px;
+    }
+
+    .section-title{
+        font-size:23px;
     }
 }
 </style>
@@ -189,20 +287,29 @@ footer p{
 <body>
 
 <header>
-    <img src="1786163139150.png" alt="দ্বীনের আলো" style="max-width:180px; height:auto;">
-    <h1 class="logo">🌙 দ্বীনের আলো</h1>
-    <p class="tagline">বিশুদ্ধ ইসলামিক জ্ঞান প্রচারের একটি ক্ষুদ্র প্রয়াস</p>
+
+    <img src="1786163139150.png" alt="দ্বীনের আলো">
+
+    <h1 class="logo">দ্বীনের আলো</h1>
+
+    <p class="tagline">
+        বিশুদ্ধ ইসলামিক জ্ঞান প্রচারের একটি ক্ষুদ্র প্রয়াস
+    </p>
+
 </header>
 
 <nav>
-    <a href="#home">হোম</a>
-    <a href="about.html">আমার পরিচয়</a<
-    <a href="#posts">প্রবন্ধ</a>
+
+    <a href="index.html">হোম</a>
+    <a href="about.html">আমার পরিচয়</a>
+    <a href="posts.html">প্রবন্ধ</a>
     <a href="#knowledge">ইসলামিক জ্ঞান</a>
     <a href="#contact">যোগাযোগ</a>
+
 </nav>
 
-<section class="hero" id="home">
+<!-- Welcome Section -->
+<section class="hero">
 
     <h1>আসসালামু আলাইকুম</h1>
 
@@ -214,19 +321,39 @@ footer p{
     </p>
 
     <div class="buttons">
-        <a class="button" href="#posts">প্রবন্ধ পড়ুন</a>
-        <a class="button secondary" href="#about">আমার পরিচয়</a>
+
+        <a class="button" href="posts.html">
+            প্রবন্ধ পড়ুন
+        </a>
+
+        <a class="button secondary" href="about.html">
+            আমার পরিচয়
+        </a>
+
     </div>
 
 </section>
 
 <div class="container">
 
-<section id="about" class="about">
+<!-- About Section -->
+<section class="about">
 
-    <h2>👤 আমার পরিচয়</h2>
+    <div class="about-header">
 
-    <h3>মুফতি সেখ আমানুর রহমান কাসেমী (কেশপুরি)</h3>
+        <img
+            src="1780549963954.jpg"
+            alt="মুফতি সেখ আমানুর রহমান কাসেমী"
+            class="about-photo"
+        >
+
+        <h2>আমার পরিচয়</h2>
+
+        <h3>
+            মুফতি সেখ আমানুর রহমান কাসেমী (কেশপুরি)
+        </h3>
+
+    </div>
 
     <p>
         মাওলানা ও মুফতি। প্রাথমিক শিক্ষা জামিয়া ইসলামিয়া
@@ -236,7 +363,7 @@ footer p{
 
     <p>
         দাওরায়ে হাদীস সম্পন্ন করেছেন জামিয়া ইসলামিয়া
-        দারুল উলুম ওয়াকফ, দেওবন্দ থেকে এবং ইফতা (ইসলামিক ল)
+        দারুল উলুম ওয়াকফ, দেওবন্দ থেকে এবং ইফতা
         সম্পন্ন করেছেন আব্দুল্লাহ ইবনে মাসউদ ফিকহ একাডেমি,
         দেওবন্দ থেকে।
     </p>
@@ -244,7 +371,7 @@ footer p{
     <p>
         বর্তমানে জামিয়া আজহারুল উলুম, বর্ধমানে খিদমত করছেন।
         এর আগে দুই বছর মাদ্রাসা সিরাজুল উলুম, তমলুকে শিক্ষকতা করেছেন।
-        বর্তমানে রাষ্ট্রবিজ্ঞান (Political Science) নিয়ে পড়াশোনা করছেন।
+        বর্তমানে রাষ্ট্রবিজ্ঞান নিয়ে পড়াশোনা করছেন।
     </p>
 
     <p>
@@ -256,67 +383,104 @@ footer p{
 
 </section>
 
-<h2 class="section-title" id="knowledge">📚 ইসলামিক জ্ঞান</h2>
+<!-- Islamic Knowledge -->
+<section id="knowledge">
 
-<div class="cards">
+    <h2 class="section-title">
+        ইসলামিক জ্ঞান
+    </h2>
 
-    <div class="card">
-        <h3>📖 কুরআন</h3>
-        <p>পবিত্র কুরআনের শিক্ষা, তাফসীর ও বিভিন্ন গুরুত্বপূর্ণ বিষয়।</p>
+    <div class="cards">
+
+        <div class="card">
+            <h3>কুরআন</h3>
+            <p>
+                পবিত্র কুরআনের শিক্ষা, তাফসীর ও বিভিন্ন
+                গুরুত্বপূর্ণ বিষয়।
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>হাদীস</h3>
+            <p>
+                হাদীসের শিক্ষা ও সুন্নাহ সম্পর্কিত
+                নির্বাচিত আলোচনা।
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>ফিকহ ও ফতোয়া</h3>
+            <p>
+                ফিকহ ও সমসাময়িক মাসআলা-মাসায়েল
+                সম্পর্কিত আলোচনা।
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>ইসলামিক প্রবন্ধ</h3>
+            <p>
+                ইসলাম, সমাজ ও সমসাময়িক বিষয় নিয়ে
+                বিভিন্ন প্রবন্ধ।
+            </p>
+        </div>
+
     </div>
-
-    <div class="card">
-        <h3>📜 হাদীস</h3>
-        <p>হাদীসের শিক্ষা ও সুন্নাহ সম্পর্কিত নির্বাচিত আলোচনা।</p>
-    </div>
-
-    <div class="card">
-        <h3>⚖️ ফিকহ ও ফতোয়া</h3>
-        <p>ফিকহ ও সমসাময়িক মাসআলা-মাসায়েল সম্পর্কিত আলোচনা।</p>
-    </div>
-
-    <div class="card">
-        <h3>📝 ইসলামিক প্রবন্ধ</h3>
-        <p>ইসলাম, সমাজ ও সমসাময়িক বিষয় নিয়ে বিভিন্ন প্রবন্ধ।</p>
-    </div>
-
-</div>
-
-<section id="posts">
-
-<h2 class="section-title">📰 সর্বশেষ পোস্ট</h2>
-
-<div class="card">
-    <h3>খুব শীঘ্রই নতুন ইসলামিক পোস্ট প্রকাশ করা হবে</h3>
-    <p>
-        ইনশাআল্লাহ, নিয়মিতভাবে ইসলামিক প্রবন্ধ,
-        কুরআন-হাদীস, ফিকহ এবং শিক্ষামূলক লেখা প্রকাশ করা হবে।
-    </p>
-</div>
 
 </section>
 
+<!-- Latest Post -->
+<section id="posts">
+
+    <h2 class="section-title">
+        সর্বশেষ প্রবন্ধ
+    </h2>
+
+    <div class="latest-post">
+
+        <h3>
+            ইলম অর্জন কেন জরুরি?
+        </h3>
+
+        <p>
+            কুরআন ও হাদীসের আলোকে ইলমের মর্যাদা,
+            আমলের আগে ইলম, প্রয়োজনীয় দ্বীনি জ্ঞান
+            এবং ইলমের উদ্দেশ্য নিয়ে আলোচনা।
+        </p>
+
+        <a class="read-more" href="posts.html">
+            সম্পূর্ণ প্রবন্ধ পড়ুন
+        </a>
+
+    </div>
+
+</section>
+
+<!-- Contact -->
 <section id="contact">
 
-<h2 class="section-title">📞 যোগাযোগ</h2>
+    <h2 class="section-title">
+        যোগাযোগ
+    </h2>
 
-<div class="card">
+    <div class="contact-card">
 
-    <p>
-        <strong>ই-মেইল:</strong><br>
-        mftskamanurrahamanqasemi@gmail.com
-    </p>
+        <p>
+            <strong>ই-মেইল:</strong><br>
+            mftskamanurrahamanqasemi@gmail.com
+        </p>
 
-    <p>
-        <strong>মোবাইল:</strong><br>
-        7364877946
-    </p>
+        <p>
+            <strong>মোবাইল:</strong><br>
+            7364877946
+        </p>
 
-    <p>
-        <small>যোগাযোগের সময়: আসর থেকে মাগরিব পর্যন্ত</small>
-    </p>
+        <p>
+            <small>
+                যোগাযোগের সময়: আসর থেকে মাগরিব পর্যন্ত
+            </small>
+        </p>
 
-</div>
+    </div>
 
 </section>
 
@@ -324,13 +488,15 @@ footer p{
 
 <footer>
 
-    <p>🌙 দ্বীনের আলো</p>
+    <p>দ্বীনের আলো</p>
 
     <p>
         মুফতি সেখ আমানুর রহমান কাসেমী (কেশপুরি)
     </p>
 
-    <p>© ২০২৬ দ্বীনের আলো | All Rights Reserved</p>
+    <p>
+        © ২০২৬ দ্বীনের আলো | All Rights Reserved
+    </p>
 
 </footer>
 
