@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>সার্চ | দ্বীনের আলো</title>
+
+<meta name="description" content="দ্বীনের আলো ওয়েবসাইটের ইসলামিক প্রবন্ধ, কুরআন, হাদীস, ফিকহ ও বিভিন্ন বিষয় খুঁজুন।">
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial,"Noto Sans Bengali",sans-serif;
+    background:#f4f7f5;
+    color:#17231d;
+    line-height:1.75;
+}
+
+/* Header */
+
+header{
+    background:linear-gradient(135deg,#075b38,#0d7a4a);
+    color:white;
+    text-align:center;
+    padding:28px 15px;
+}
+
+header h1{
+    margin:0;
+    font-size:30px;
+}
+
+header p{
+    margin:5px 0 0;
+    font-size:14px;
+}
+
+/* Navigation */
+
+nav{
+    background:#063f29;
+    padding:11px 6px;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:10;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    display:inline-block;
+    margin:4px 8px;
+    font-size:14px;
+    font-weight:bold;
+}
+
+/* Main */
+
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:35px 16px 50px;
+}
+
+/* Title */
+
+.title{
+    text-align:center;
+    color:#075b38;
+    font-size:28px;
+    margin:10px 0 25px;
+}
+
+/* Search box */
+
+.search-box{
+    background:white;
+    padding:20px;
+    border-radius:14px;
+    box-shadow:0 3px 15px rgba(0,0,0,.07);
+    border-top:4px solid #075b38;
+    margin-bottom:25px;
+}
+
+.search-area{
+    display:flex;
+    gap:8px;
+}
+
+.search-area input{
+    flex:1;
+    padding:13px 15px;
+    border:1px solid #ccdcd3;
+    border-radius:8px;
+    font-size:16px;
+    outline:none;
+    font-family:inherit;
+}
+
+.search-area input:focus{
+    border-color:#075b38;
+    box-shadow:0 0 0 2px rgba(7,91,56,.10);
+}
+
+.search-button{
+    background:#075b38;
+    color:white;
+    border:none;
+    padding:0 20px;
+    border-radius:8px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    font-family:inherit;
+}
+
+.search-button:hover{
+    background:#06452b;
+}
+
+/* Search result info */
+
+.result-info{
+    text-align:center;
+    color:#65736c;
+    margin:15px 0;
+    font-size:14px;
+}
+
+/* Results */
+
+.results{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+}
+
+.result-card{
+    background:white;
+    padding:20px;
+    border-radius:13px;
+    box-shadow:0 3px 14px rgba(0,0,0,.06);
+    border-left:4px solid #075b38;
+}
+
+.result-card h2{
+    color:#075b38;
+    margin:0 0 6px;
+    font-size:22px;
+}
+
+.result-card .category{
+    display:inline-block;
+    color:#075b38;
+    background:#eaf5ef;
+    padding:3px 9px;
+    border-radius:5px;
+    font-size:12px;
+    margin-bottom:8px;
+}
+
+.result-card p{
+    margin:6px 0;
+    color:#4b5a52;
+}
+
+.read-more{
+    display:inline-block;
+    margin-top:10px;
+    background:#075b38;
+    color:white;
+    text-decoration:none;
+    padding:8px 16px;
+    border-radius:7px;
+    font-weight:bold;
+}
+
+.read-more:hover{
+    background:#06452b;
+}
+
+/* No result */
+
+.no-result{
+    background:white;
+    text-align:center;
+    padding:35px 20px;
+    border-radius:13px;
+    box-shadow:0 3px 14px rgba(0,0,0,.06);
+    color:#68766f;
+}
+
+.no-result h3{
+    color:#075b38;
+    margin:0 0 8px;
+}
+
+/* Footer */
+
+footer{
+    background:#063d27;
+    color:white;
+    text-align:center;
+    padding:22px 15px;
+}
+
+footer p{
+    margin:5px;
+    font-size:14px;
+}
+
+/* Mobile */
+
+@media(max-width:600px){
+
+    header h1{
+        font-size:27px;
+    }
+
+    .title{
+        font-size:25px;
+    }
+
+    .search-area{
+        flex-direction:column;
+    }
+
+    .search-button{
+        padding:11px;
+    }
+
+    .result-card{
+        padding:18px 16px;
+    }
+
+    .result-card h2{
+        font-size:20px;
+    }
+
+    nav a{
+        margin:4px 5px;
+        font-size:13px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <h1>🌙 দ্বীনের আলো</h1>
+
+    <p>
+        বিশুদ্ধ ইসলামিক জ্ঞান প্রচারের একটি ক্ষুদ্র প্রয়াস
+    </p>
+
+</header>
+
+<nav>
+
+    <a href="index.html">হোম</a>
+
+    <a href="about.html">আমার পরিচয়</a>
+
+    <a href="posts.html">প্রবন্ধ</a>
+
+    <a href="search.html">🔍 সার্চ</a>
+
+    <a href="index.html#knowledge">ইসলামিক জ্ঞান</a>
+
+    <a href="index.html#contact">যোগাযোগ</a>
+
+</nav>
+
+
+<div class="container">
+
+    <h1 class="title">
+        🔍 প্রবন্ধ খুঁজুন
+    </h1>
+
+
+    <div class="search-box">
+
+        <div class="search-area">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="যেমন: মিথ্যা, গীবত, ইলম, হাদীস..."
+                autocomplete="off"
+            >
+
+            <button
+                class="search-button"
+                onclick="searchPosts()"
+            >
+                সার্চ
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div id="resultInfo" class="result-info">
+        সব প্রবন্ধ দেখানো হচ্ছে
+    </div>
+
+
+    <div id="results" class="results"></div>
+
+</div>
+
+
+<footer>
+
+    <p>🌙 দ্বীনের আলো</p>
+
+    <p>
+        মুফতি সেখ আমানুর রহমান কাসেমী (কেশপুরি)
+    </p>
+
+    <p>
+        © ২০২৬ দ্বীনের আলো | All Rights Reserved
+    </p>
+
+</footer>
+
+
+<script>
+
+/*
+========================================
+দ্বীনের আলো — প্রবন্ধের তালিকা
+========================================
+*/
+
+const posts = [
+
+    {
+        title: "ইলম অর্জন কেন জরুরি?",
+        category: "ইসলামিক প্রবন্ধ",
+        description:
+        "কুরআন ও হাদীসের আলোকে ইলমের মর্যাদা, আমলের আগে ইলমের প্রয়োজনীয়তা এবং উপকারী ইলম অর্জনের গুরুত্ব নিয়ে আলোচনা।",
+        keywords:
+        "ইলম জ্ঞান কুরআন হাদীস আমল দ্বীনি শিক্ষা ইসলামিক শিক্ষা",
+        link: "ilm-why-important.html"
+    },
+
+    {
+        title: "গীবত: একটি ধ্বংসাত্মক সামাজিক ব্যাধি",
+        category: "ইসলামিক প্রবন্ধ",
+        description:
+        "গীবতের সংজ্ঞা, কুরআন ও হাদীসে এর ভয়াবহতা, সামাজিক ক্ষতি, কখন গীবত বৈধ হতে পারে এবং গীবত থেকে বাঁচার কার্যকর উপায় নিয়ে আলোচনা।",
+        keywords:
+        "গীবত গিবত পরনিন্দা কুরআন হাদীস সামাজিক ব্যাধি ইসলাম",
+        link: "gibot.html"
+    },
+
+    {
+        title: "ভারতের স্বাধীনতা সংগ্রামে আলেম-ওলামা ও মুসলিম সমাজের অবদান",
+        category: "সমসাময়িক বিষয়",
+        description:
+        "১৫ আগস্ট স্বাধীনতা দিবস উপলক্ষে ভারতের স্বাধীনতা সংগ্রামে আলেম-ওলামা ও মুসলিম সমাজের অবদান, ১৮৫৭, রেশমি রুমাল আন্দোলন, খিলাফত আন্দোলন ও স্বাধীনতা সংগ্রামের বিভিন্ন অধ্যায়।",
+        keywords:
+        "স্বাধীনতা ভারত ১৫ আগস্ট স্বাধীনতা দিবস আলেম ওলামা মুসলিম সমাজ ১৮৫৭ রেশমি রুমাল খিলাফত আন্দোলন",
+        link: "independence.html"
+    },
+
+    {
+        title: "মিথ্যা: একটি ছোট কথা, কিন্তু বড় গুনাহ",
+        category: "ইসলামিক প্রবন্ধ",
+        description:
+        "কুরআন, হাদীস ও ফিকহের আলোকে মিথ্যার ভয়াবহতা, এর কারণ, মিথ্যার ফিকহী হুকুম এবং মিথ্যা থেকে বাঁচার উপায় নিয়ে আলোচনা।",
+        keywords:
+        "মিথ্যা মিথ্যাচার সত্যবাদিতা কুরআন হাদীস ফিকহ রদ্দুল মুহতার গুনাহ তাওবা",
+        link: "mithya.html"
+    }
+
+];
+
+
+/*
+========================================
+প্রবন্ধ দেখানোর ফাংশন
+========================================
+*/
+
+function displayPosts(postList){
+
+    const results = document.getElementById("results");
+
+    results.innerHTML = "";
+
+    if(postList.length === 0){
+
+        results.innerHTML = `
+            <div class="no-result">
+
+                <h3>কোনো প্রবন্ধ পাওয়া যায়নি</h3>
+
+                <p>
+                    অন্য কোনো শব্দ দিয়ে আবার সার্চ করুন।
+                </p>
+
+            </div>
+        `;
+
+        return;
+    }
+
+
+    postList.forEach(post => {
+
+        results.innerHTML += `
+
+            <div class="result-card">
+
+                <span class="category">
+                    ${post.category}
+                </span>
+
+                <h2>
+                    ${post.title}
+                </h2>
+
+                <p>
+                    ${post.description}
+                </p>
+
+                <a
+                    class="read-more"
+                    href="${post.link}"
+                >
+                    সম্পূর্ণ প্রবন্ধ পড়ুন →
+                </a>
+
+            </div>
+
+        `;
+
+    });
+
+}
+
+
+/*
+========================================
+সার্চ ফাংশন
+========================================
+*/
+
+function searchPosts(){
+
+    const input =
+        document.getElementById("searchInput")
+        .value
+        .trim()
+        .toLowerCase();
+
+
+    if(input === ""){
+
+        displayPosts(posts);
+
+        document.getElementById("resultInfo").innerText =
+            "সব প্রবন্ধ দেখানো হচ্ছে";
+
+        return;
+
+    }
+
+
+    const results = posts.filter(post => {
+
+        const text = (
+
+            post.title +
+            " " +
+            post.description +
+            " " +
+            post.keywords
+
+        ).toLowerCase();
+
+        return text.includes(input);
+
+    });
+
+
+    document.getElementById("resultInfo").innerText =
+        results.length +
+        "টি প্রবন্ধ পাওয়া গেছে";
+
+
+    displayPosts(results);
+
+}
+
+
+/*
+========================================
+Enter চাপলেও সার্চ হবে
+========================================
+*/
+
+document
+.getElementById("searchInput")
+.addEventListener("keydown", function(event){
+
+    if(event.key === "Enter"){
+
+        searchPosts();
+
+    }
+
+});
+
+
+/*
+========================================
+পেজ খুললে সব পোস্ট দেখাবে
+========================================
+*/
+
+displayPosts(posts);
+
+</script>
+
+</body>
+</html>
